@@ -1,6 +1,6 @@
+import { Oswald_400Regular, useFonts } from '@expo-google-fonts/oswald';
 import { Image } from 'expo-image';
-import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
-import { useFonts, Oswald_400Regular } from '@expo-google-fonts/oswald';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 
 export default function HomeScreen() {
   const [fontsLoaded] = useFonts({ Oswald_400Regular });
@@ -13,7 +13,7 @@ export default function HomeScreen() {
         style={styles.image}
       />
       <Text style={styles.titulo}>Olá, Bem-Vindo!</Text>
-      <TouchableOpacity style={styles.button} onPress={() => alert('Clicou')}>
+      <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('login')}>
         <Text style={styles.buttonText}>Entrar</Text>
       </TouchableOpacity>
     </View>
